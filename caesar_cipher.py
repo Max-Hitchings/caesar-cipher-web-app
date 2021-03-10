@@ -7,8 +7,10 @@ def encrypt(plain_test, shift):
         elif char_ascii <= (90-shift) and char_ascii >= 65 or char_ascii <= (122-shift) and char_ascii >= 97:
             char_ascii = char_ascii + shift
             plain_text += chr(char_ascii)
-        else:
-            pass
+        elif char.islower() and char_ascii >= (122-shift):
+            plain_text += chr(((char_ascii-(96-shift))%26)+96)
+        elif char.isupper() and char_ascii >= (90-shift):
+            plain_text += chr(((char_ascii-(64-shift))%26)+64)
     return plain_text
 
 
