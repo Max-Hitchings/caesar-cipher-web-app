@@ -1,6 +1,8 @@
-def encrypt(plain_test, shift):
+def encrypt():
+    input_text = input("\nInput your plain text to encrypt: ")
+    shift = int(input("\nWhat do you want the shift to be? "))
     plain_text = ""
-    for char in plain_test:
+    for char in input_text:
         char_ascii = ord(char)
         if char_ascii == 32:
             plain_text += " "
@@ -15,7 +17,8 @@ def encrypt(plain_test, shift):
             return f"Sorry i can't handle {char} yet. Should be able to so tho :)"
     return plain_text
 
-def decrypt(cipher_text):
+def decrypt():
+    cipher_text = input("\nInput what you want to decrypt: ")
     all_possibilities = []
     for shift in range(26):
         plain_text = ""
@@ -34,10 +37,23 @@ def decrypt(cipher_text):
         all_possibilities.append(plain_text)
     return all_possibilities
     
+def user_input():
+    functions = [[encrypt, "Encrypt"], [decrypt, "Decrypt"]]
+    print("Please pick one of the following functions to use:")
+    for f in range(len(functions)):
+        print(str(f) + ".", functions[f][1])
+    while True:
+        try:
+            user_pick = int(input())
+            break
+        except:
+            print("Please enter a number")
+    print(functions[user_pick][0]())
+
 
 #plain_test = input("\nInput your plain text to encrypt: ")
 #shift = int(input("\nWhat do you want the shift to be? "))
-#
+
 #print(f"\nYour encrypted message is: {encrypt(plain_test, shift)}")
 
-print(decrypt("z"))
+user_input()
