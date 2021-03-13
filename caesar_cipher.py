@@ -45,7 +45,9 @@ def user_input():
     while True:
         try:
             user_pick = int(input())
-            break
+            if user_pick <= len(functions):
+                break
+            print("Please a valid number")
         except:
             print("Please enter a number")
     print(functions[user_pick][0]())

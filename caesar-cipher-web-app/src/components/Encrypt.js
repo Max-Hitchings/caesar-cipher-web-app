@@ -20,6 +20,10 @@ const encrypt = (plainText, shift) => {
       charAscii >= 90 - shift
     ) {
       outputText += String.fromCharCode(((charAscii - (64 - shift)) % 26) + 96);
+    } else {
+      console.error(
+        `Sorry i can't handle ${char} yet. Should be able to so tho :)`
+      );
     }
   }
   console.log(outputText);
