@@ -1,9 +1,9 @@
-import Main from "./components/Main.jsx";
+import AppRoutes from "./router.jsx";
 
 function App() {
   return (
     <>
-      <Main></Main>
+      <AppRoutes />
     </>
   );
 }

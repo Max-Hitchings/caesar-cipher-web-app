@@ -3,7 +3,7 @@ import React from "react";
 export default function Results({ results }) {
   return (
     <div>
-      <div className="result">sdsd</div>
+      <div className="result">{results}</div>
     </div>
   );
 }
