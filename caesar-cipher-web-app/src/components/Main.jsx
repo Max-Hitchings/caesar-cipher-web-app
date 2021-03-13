@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   TextField,
   InputAdornment,
@@ -11,7 +11,16 @@ import Results from "./Results.jsx";
 import encrypt from "./Encrypt";
 
 export default function Main() {
-  useEffect(() => encrypt("Zz", 3));
+  const [results, setresults] = useState([]);
+  const [textFieldValue, settextFieldValue] = useState("");
+
+  const handleSubmit = () => {
+    setresults(encrypt(textFieldValue, 1));
+  };
+
+  const handleTextFieldChange = (e) => {
+    settextFieldValue(e.target.value);
+  };
 
   return (
     <>
@@ -22,13 +31,16 @@ export default function Main() {
               <FormControl>
                 <TextField
                   label="Input"
+                  type="text"
+                  value={textFieldValue}
+                  onChange={handleTextFieldChange}
                   multiline
                   variant="filled"
                   fullWidth={true}
                   InputProps={{
                     endAdornment: (
                       <>
-                        <span>
+                        <span onClick={handleSubmit}>
                           <InputAdornment>
                             <FaArrowRight className="input-submit" />
                           </InputAdornment>
@@ -43,7 +55,7 @@ export default function Main() {
           </form>
         </div>
         <div className="result-container">
-          <Results />
+          <Results results={results} />
         </div>
       </div>
     </>

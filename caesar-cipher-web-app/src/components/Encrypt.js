@@ -1,7 +1,6 @@
 const encrypt = (plainText, shift) => {
   var outputText = "";
   for (var i = 0; i < plainText.length; i++) {
-    console.log(plainText[i], plainText.charCodeAt(i));
     var charAscii = plainText.charCodeAt(i);
     if (charAscii === 32) {
       outputText += " ";
@@ -22,7 +21,7 @@ const encrypt = (plainText, shift) => {
       outputText += String.fromCharCode(((charAscii - (64 - shift)) % 26) + 96);
     } else {
       console.error(
-        `Sorry i can't handle ${char} yet. Should be able to so tho :)`
+        `Sorry i can't handle ${plainText[i]} yet. Should be able to so tho :)`
       );
     }
   }
