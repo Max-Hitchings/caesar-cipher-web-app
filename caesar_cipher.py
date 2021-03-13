@@ -45,7 +45,9 @@ def user_input():
     while True:
         try:
             user_pick = int(input())
-            break
+            if user_pick <= len(functions):
+                break
+            print("Please a valid number")
         except:
             print("Please enter a number")
     print(functions[user_pick][0]())
@@ -55,5 +57,5 @@ def user_input():
 #shift = int(input("\nWhat do you want the shift to be? "))
 
 #print(f"\nYour encrypted message is: {encrypt(plain_test, shift)}")
-
-user_input()
+while True:
+    user_input()
