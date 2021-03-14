@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  TextField,
-  InputAdornment,
-  IconButton,
-  FormControl,
-} from "@material-ui/core";
-import { FaArrowRight } from "react-icons/fa";
+import { TextField } from "@material-ui/core";
 import encrypt from "./functions/Encrypt";
 import Results from "./Results.jsx";
 
@@ -16,7 +10,6 @@ export default function EncryptPage() {
 
   const handleSubmit = () => {
     setresults(encrypt(textFieldValue, parseInt(shiftFieldValue)));
-    console.log(textFieldValue, shiftFieldValue);
   };
 
   const handleTextFieldChange = (e) => {
@@ -32,7 +25,7 @@ export default function EncryptPage() {
       <div>
         <div className="textfield-container">
           <TextField
-            label="Input"
+            label="Plain Text"
             value={textFieldValue}
             onChange={handleTextFieldChange}
             multiline
@@ -48,10 +41,10 @@ export default function EncryptPage() {
             variant="filled"
           />
         </div>
-        <button className="submit" onClick={handleSubmit}>
+        <button className="submit width-420" onClick={handleSubmit}>
           SUBMIT
         </button>
-        <Results results={results} />
+        <Results results={[results]} multiple={false} />
       </div>
     </div>
   );

@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import {
-  TextField,
-  InputAdornment,
-  IconButton,
-  FormControl,
-} from "@material-ui/core";
-import { FaArrowRight } from "react-icons/fa";
-import encrypt from "./functions/Encrypt";
+import { TextField } from "@material-ui/core";
+import Results from "./Results.jsx";
+import decrypt from "./functions/Decrypt";
 
-export default function DecryptPage({ setresults }) {
+export default function DecryptPage() {
   const [textFieldValue, settextFieldValue] = useState("");
+  const [results, setresults] = useState([]);
+
+  //useEffect(() => decrypt("max"), []);
 
   const handleSubmit = () => {
-    setresults(encrypt(textFieldValue, 0));
+    setresults(decrypt(textFieldValue));
   };
 
   const handleTextFieldChange = (e) => {
@@ -21,33 +19,22 @@ export default function DecryptPage({ setresults }) {
 
   return (
     <div className="input-container">
-      <form>
+      <div>
         <div className="textfield-container">
-          <FormControl>
-            <TextField
-              label="Input"
-              type="text"
-              value={textFieldValue}
-              onChange={handleTextFieldChange}
-              multiline
-              variant="filled"
-              fullWidth={true}
-              InputProps={{
-                endAdornment: (
-                  <>
-                    <span onClick={handleSubmit}>
-                      <InputAdornment>
-                        <FaArrowRight className="input-submit" />
-                      </InputAdornment>
-                      <div style={{ height: "10px" }} />
-                    </span>
-                  </>
-                ),
-              }}
-            />
-          </FormControl>
+          <TextField
+            label="Cipher Text"
+            type="text"
+            value={textFieldValue}
+            onChange={handleTextFieldChange}
+            multiline
+            variant="filled"
+          />
         </div>
-      </form>
+        <button className="submit width-210 margin-5" onClick={handleSubmit}>
+          SUBMIT
+        </button>
+        <Results results={results} multiple={true} />
+      </div>
     </div>
   );
 }
