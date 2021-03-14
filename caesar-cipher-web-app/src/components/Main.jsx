@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../css/main.css";
-import encrypt from "./functions/Encrypt";
 import EncryptPage from "./EncryptPage.jsx";
 import FunctionPicker from "./FunctionPicker.jsx";
+import DecryptPage from "./DecryptPage.jsx";
 
 export default function Main() {
-  const [results, setresults] = useState([]);
   const [method, setmethod] = useState("encrypt");
 
   return (
@@ -14,7 +13,7 @@ export default function Main() {
         <FunctionPicker method={method} setmethod={setmethod} />
       </div>
       <div className="container">
-        {method === "encrypt" ? <EncryptPage /> : null}
+        {method === "encrypt" ? <EncryptPage /> : <DecryptPage />}
         <div className="result-container"></div>
       </div>
     </>

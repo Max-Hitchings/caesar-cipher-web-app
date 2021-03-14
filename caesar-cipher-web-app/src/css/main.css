@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: rgba(1, 13, 21, 0.8);
+  overflow-x: hidden;
 }
 
 .container {
@@ -67,7 +68,6 @@ body {
 }
 
 .submit {
-  width: 420px;
   border: 1px solid;
   font-family: "DotGothic16", sans-serif;
   font-weight: bolder;
@@ -75,4 +75,17 @@ body {
   border-radius: 3px;
   background-color: rgba(13, 46, 117, 0.534);
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.width-420 {
+  width: 420px;
+}
+
+.width-210 {
+  width: 201px;
+}
+
+.margin-5 {
+  margin-top: 5px;
 }

@@ -1,7 +1,4 @@
 const encrypt = (plainText, shift) => {
-  //console.log(plainText, shift);
-  //plainText = "max";
-  //shift = 1;
   var outputText = "";
   for (var i = 0; i < plainText.length; i++) {
     const charAscii = plainText.charCodeAt(i);
