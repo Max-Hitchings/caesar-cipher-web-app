@@ -17,7 +17,6 @@ def step(input_text, shift):
 def encrypt():
     input_text = input("\nInput your plain text to encrypt: ")
     shift = int(input("\nWhat do you want the shift to be? "))
-
     return step(input_text, shift)
 
 def decrypt():
@@ -42,10 +41,5 @@ def user_input():
             print("Please enter a number")
     print(functions[user_pick][0]())
 
-
-#plain_test = input("\nInput your plain text to encrypt: ")
-#shift = int(input("\nWhat do you want the shift to be? "))
-
-#print(f"\nYour encrypted message is: {encrypt(plain_test, shift)}")
 while True:
     user_input()

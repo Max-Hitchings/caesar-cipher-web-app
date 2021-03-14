@@ -10,6 +10,8 @@ export default function Main() {
   return (
     <>
       <div className="containerFunction">
+        <h1>CAESAR CIPHER</h1>
+        <h3>BY MAX H</h3>
         <FunctionPicker method={method} setmethod={setmethod} />
       </div>
       <div className="container">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TextField } from "@material-ui/core";
 import encrypt from "./functions/Encrypt";
 import Results from "./Results.jsx";
+import { withStyles } from "@material-ui/core/styles";
 
 export default function EncryptPage() {
   const [textFieldValue, settextFieldValue] = useState("");
@@ -19,6 +20,13 @@ export default function EncryptPage() {
   const handleshiftFieldChange = (e) => {
     setshiftFieldValue(e.target.value);
   };
+
+  const StyledTextField = withStyles({
+    root: {
+      backgroundColor: "rgba(204, 219, 231, 0.466)",
+      color: "red",
+    },
+  })(TextField);
 
   return (
     <div className="input-container">
