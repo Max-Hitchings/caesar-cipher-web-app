@@ -103,7 +103,7 @@ h3 {
   font-size: 20px;
   border-radius: 3px;
   background-color: var(--light-button);
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   cursor: pointer;
 }
 
@@ -117,4 +117,16 @@ h3 {
 
 .margin-5 {
   margin-top: 5px;
+}
+
+.sortButton {
+  width: 201px;
+  background-color: var(--light-button);
+  border-radius: 3px;
+  border: 1px solid;
+  font-family: "DotGothic16", sans-serif;
+  cursor: pointer;
+  font-weight: bolder;
+  text-align: center;
+  display: block;
 }
