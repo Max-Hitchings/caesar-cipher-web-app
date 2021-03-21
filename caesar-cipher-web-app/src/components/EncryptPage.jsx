@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { TextField } from "@material-ui/core";
 import encrypt from "./functions/Encrypt";
 import Results from "./Results.jsx";
+import { StyledTextField } from "./StyledTextField.jsx";
 
 export default function EncryptPage() {
   const [textFieldValue, settextFieldValue] = useState("");
@@ -24,16 +24,15 @@ export default function EncryptPage() {
     <div className="input-container">
       <div>
         <div className="textfield-container">
-          <TextField
+          <StyledTextField
             label="Plain Text"
             value={textFieldValue}
             onChange={handleTextFieldChange}
             multiline
             variant="filled"
-            margin="normal"
           />
-          <TextField
-            margin="normal"
+          <StyledTextField
+            margin="dense"
             label="Shift"
             type="number"
             value={shiftFieldValue}
@@ -41,7 +40,7 @@ export default function EncryptPage() {
             variant="filled"
           />
         </div>
-        <button className="submit width-420" onClick={handleSubmit}>
+        <button className="submit" onClick={handleSubmit}>
           SUBMIT
         </button>
         <Results results={[results]} multiple={false} />

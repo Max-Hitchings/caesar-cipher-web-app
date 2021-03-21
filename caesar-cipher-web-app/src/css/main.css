@@ -78,6 +78,10 @@ h3 {
   color: #89d6fb;
 }
 
+.bestMatch {
+  color: #0cb615;
+}
+
 .FunctionPicker-container {
   display: flex;
   cursor: pointer;
@@ -105,14 +109,7 @@ h3 {
   background-color: var(--light-button);
   margin-bottom: 3px;
   cursor: pointer;
-}
-
-.width-420 {
-  width: 420px;
-}
-
-.width-210 {
-  width: 201px;
+  width: 100%;
 }
 
 .margin-5 {
@@ -120,7 +117,7 @@ h3 {
 }
 
 .sortButton {
-  width: 201px;
+  width: 100%;
   background-color: var(--light-button);
   border-radius: 3px;
   border: 1px solid;

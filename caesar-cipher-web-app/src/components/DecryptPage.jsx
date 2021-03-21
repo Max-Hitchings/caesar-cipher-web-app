@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { TextField } from "@material-ui/core";
 import Results from "./Results.jsx";
 import decrypt from "./functions/Decrypt";
 import sortResults from "./functions/sortResults.js";
+import Alert from "@material-ui/lab/Alert";
+import { StyledTextField } from "./StyledTextField.jsx";
 
 export default function DecryptPage() {
   const [textFieldValue, settextFieldValue] = useState("");
@@ -12,8 +13,6 @@ export default function DecryptPage() {
     index: null,
     value: null,
   });
-
-  useEffect(() => console.log("shush", sorted), [sorted]);
 
   const handleSubmit = () => {
     setresults(decrypt(textFieldValue));
@@ -46,7 +45,17 @@ export default function DecryptPage() {
   const BestResult = () => {
     return (
       <>
-        <div className="result">{`Best match: ${BestResultValue.index}.${BestResultValue.value}`}</div>
+        <div className="result bestMatch">{`Best match: ${BestResultValue.index}.${BestResultValue.value}`}</div>
+      </>
+    );
+  };
+
+  const SortErrorAlert = () => {
+    return (
+      <>
+        <Alert variant="filled" severity="error" style={{ marginTop: "5px" }}>
+          The result was inconclusive
+        </Alert>
       </>
     );
   };
@@ -55,7 +64,7 @@ export default function DecryptPage() {
     <div className="input-container">
       <div>
         <div className="textfield-container">
-          <TextField
+          <StyledTextField
             label="Cipher Text"
             type="text"
             value={textFieldValue}
@@ -64,10 +73,15 @@ export default function DecryptPage() {
             variant="filled"
           />
         </div>
-        <button className="submit width-210 margin-5" onClick={handleSubmit}>
+        <button className="submit margin-5" onClick={handleSubmit}>
           SUBMIT
         </button>
         {results.length > 0 ? <SortButton /> : ""}
+        {BestResultValue.index == null && sorted === true ? (
+          <SortErrorAlert />
+        ) : (
+          ""
+        )}
         {BestResultValue.index !== null || undefined ? <BestResult /> : ""}
         <Results results={results} multiple={true} />
       </div>
