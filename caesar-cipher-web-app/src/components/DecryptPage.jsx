@@ -62,29 +62,27 @@ export default function DecryptPage() {
 
   return (
     <div className="input-container">
-      <div>
-        <div className="textfield-container">
-          <StyledTextField
-            label="Cipher Text"
-            type="text"
-            value={textFieldValue}
-            onChange={handleTextFieldChange}
-            multiline
-            variant="filled"
-          />
-        </div>
-        <button className="submit margin-5" onClick={handleSubmit}>
-          SUBMIT
-        </button>
-        {results.length > 0 ? <SortButton /> : ""}
-        {BestResultValue.index == null && sorted === true ? (
-          <SortErrorAlert />
-        ) : (
-          ""
-        )}
-        {BestResultValue.index !== null || undefined ? <BestResult /> : ""}
-        <Results results={results} multiple={true} />
+      <div className="textfield-container">
+        <StyledTextField
+          label="Cipher Text"
+          type="text"
+          value={textFieldValue}
+          onChange={handleTextFieldChange}
+          multiline
+          variant="filled"
+        />
       </div>
+      <button className="submit margin-5" onClick={handleSubmit}>
+        SUBMIT
+      </button>
+      {results.length > 0 ? <SortButton /> : ""}
+      {BestResultValue.index == null && sorted === true ? (
+        <SortErrorAlert />
+      ) : (
+        ""
+      )}
+      {BestResultValue.index !== null || undefined ? <BestResult /> : ""}
+      <Results results={results} multiple={true} />
     </div>
   );
 }

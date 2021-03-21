@@ -22,7 +22,7 @@ export default function EncryptPage() {
 
   return (
     <div className="input-container">
-      <div>
+      <div style={{ maxWidth: "100vw", wordWrap: "normal" }}>
         <div className="textfield-container">
           <StyledTextField
             label="Plain Text"
