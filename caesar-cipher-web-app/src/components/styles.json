@@ -1,0 +1,16 @@
+{
+  "light": {
+    "background": "#01303f",
+    "lightButton": "#02a9f7",
+    "darkButton": "#02577a",
+    "lightText": "#d4f0fc",
+    "inputBackground": "rgba(54, 115, 156, 0.3)"
+  },
+  "dark": {
+    "background": "#25274d",
+    "lightButton": "#2eca55",
+    "darkButton": "#29648a",
+    "lightText": "#aaabb8",
+    "inputBackground": "rgba(144, 238, 144, 0.3)"
+  }
+}
