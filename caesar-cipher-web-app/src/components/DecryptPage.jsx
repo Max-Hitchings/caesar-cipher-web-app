@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Results from "./Results.jsx";
 import decrypt from "./functions/Decrypt";
 import sortResults from "./functions/sortResults.js";

@@ -9,7 +9,7 @@ const styles = require("./styles.json");
 
 export default function Main() {
   const [method, setmethod] = useState("encrypt");
-  const [style, setstyle] = useState(styles.light);
+  const [style, setstyle] = useState(styles.blue);
 
   let root = document.documentElement;
   useEffect(() => {
@@ -21,8 +21,7 @@ export default function Main() {
   }, [style]);
 
   const colourChange = () => {
-    const newStyle = style === styles.dark ? styles.light : styles.dark;
-
+    const newStyle = style === styles.purple ? styles.blue : styles.purple;
     setstyle(newStyle);
   };
 
@@ -39,7 +38,14 @@ export default function Main() {
       </span>
       <div className="containerFunction">
         <h1>CAESAR CIPHER</h1>
-        <h3>BY MAX H</h3>
+        <a
+          href="https://github.com/Max-Hitchings"
+          rel="author"
+          referrerpolicy="no-referrer"
+          target="_blank"
+        >
+          <h3>BY MAX H</h3>
+        </a>
         <FunctionPicker method={method} setmethod={setmethod} />
       </div>
       <div className="container">

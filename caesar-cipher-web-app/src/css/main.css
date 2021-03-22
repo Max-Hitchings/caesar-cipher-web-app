@@ -44,7 +44,7 @@ h3 {
 .container {
   display: flex;
   width: 100vw;
-  height: 70vh;
+  height: 60vh;
   justify-content: top;
 }
 
@@ -146,4 +146,25 @@ h3 {
   position: fixed;
   top: 0;
   right: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  align-self: center;
+}
+
+.footer-logo {
+  align-self: center;
+  margin-bottom: 3px;
 }
