@@ -32,6 +32,7 @@ export default function EncryptPage() {
             variant="filled"
           />
           <StyledTextField
+            color="primary"
             margin="dense"
             label="Shift"
             type="number"

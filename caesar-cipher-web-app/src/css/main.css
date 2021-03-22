@@ -1,17 +1,17 @@
 :root {
+  /*
   --background: #01303f;
   --light-button: #02a9f7;
   --dark-button: #02577a;
   --light-text: #d4f0fc;
-  --test: rgba(204, 219, 231, 0.466);
-
-  /*
-  --background: #25274d;
-  --light-button: #2e9cca;
-  --dark-button: #29648a;
-  --light-text: #AABB8;
-  --test: rgba(204, 219, 231, 0.466);
+  --input-background: rgba(144, 238, 144, 0.3);
   */
+
+  --background: #25274d;
+  --light-button: #2eca55;
+  --dark-button: #29648a;
+  --light-text: #aaabb8;
+  --input-background: rgba(144, 238, 144, 0.3);
 
   /*
   --background: #2f4454;
@@ -23,7 +23,6 @@
 body {
   margin: 0;
   background-color: var(--background);
-  overflow-x: hidden;
 }
 
 h1 {
@@ -104,10 +103,13 @@ h3 {
   background-color: var(--dark-button);
   font-family: "DotGothic16", sans-serif;
   font-weight: bold;
+  color: var(--light-text);
+  border-color: black;
 }
 
 .FunctionPicker-button-active {
   background-color: var(--light-button);
+  color: rgb(0, 0, 0);
 }
 
 .submit {
@@ -136,4 +138,10 @@ h3 {
   font-weight: bolder;
   text-align: center;
   display: block;
+}
+
+.colourSelect {
+  position: fixed;
+  top: 0;
+  right: 10px;
 }
