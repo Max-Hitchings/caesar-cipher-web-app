@@ -7,17 +7,19 @@
   --input-background: rgba(144, 238, 144, 0.3);
   */
 
+  /*
   --background: #25274d;
   --light-button: #2eca55;
   --dark-button: #29648a;
   --light-text: #aaabb8;
   --input-background: rgba(144, 238, 144, 0.3);
-
-  /*
-  --background: #2f4454;
-  --light-button: #376e6f;
-  --dark-button: #284c4e;
   */
+
+  --background: ;
+  --light-button: ;
+  --dark-button: ;
+  --light-text: ;
+  --input-background: ;
 }
 
 body {
