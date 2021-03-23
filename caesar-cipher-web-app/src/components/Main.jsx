@@ -18,7 +18,7 @@ export default function Main() {
     root.style.setProperty("--dark-button", style.darkButton);
     root.style.setProperty("--light-text", style.lightText);
     root.style.setProperty("--input-background", style.inputBackground);
-  }, [style]);
+  }, [style, root.style]);
 
   const colourChange = () => {
     const newStyle = style === styles.purple ? styles.blue : styles.purple;
@@ -40,8 +40,7 @@ export default function Main() {
         <h1>CAESAR CIPHER</h1>
         <a
           href="https://github.com/Max-Hitchings"
-          rel="author"
-          referrerpolicy="no-referrer"
+          rel="author noreferrer"
           target="_blank"
         >
           <h3>BY MAX H</h3>
