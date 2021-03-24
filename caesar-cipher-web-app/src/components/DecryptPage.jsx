@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Results from "./Results.jsx";
 import decrypt from "./functions/Decrypt";
 import sortResults from "./functions/sortResults.js";
@@ -29,13 +29,18 @@ export default function DecryptPage() {
     settextFieldValue(e.target.value);
   };
 
+  useEffect(() => {
+    console.log("sorted: ", sorted);
+  }, [sorted]);
+
   const SortButton = () => {
     return (
       <button
-        className="sortButton"
+        className={`sortButton ${sorted ? "" : "sortButton-active"}`}
         onClick={() => {
           sortResults(sorted, setsorted, results, setBestResultValue);
         }}
+        disabled={sorted}
       >
         SORT
       </button>

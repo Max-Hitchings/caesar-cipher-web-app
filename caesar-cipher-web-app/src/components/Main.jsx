@@ -21,8 +21,7 @@ export default function Main() {
   }, [style, root.style]);
 
   const colourChange = () => {
-    const newStyle = style === styles.purple ? styles.blue : styles.purple;
-    setstyle(newStyle);
+    setstyle(style === styles.purple ? styles.blue : styles.purple);
   };
 
   return (
