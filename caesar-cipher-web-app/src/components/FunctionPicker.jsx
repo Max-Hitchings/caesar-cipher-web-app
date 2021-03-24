@@ -1,14 +1,18 @@
 import React from "react";
 
 export default function FunctionPicker({ method, setmethod }) {
-  const handleFunctionChange = () => {
-    method === "encrypt" ? setmethod("decrypt") : setmethod("encrypt");
+  const handleEncryptPick = () => {
+    setmethod("encrypt");
+  };
+
+  const handleDecryptPick = () => {
+    setmethod("decrypt");
   };
 
   return (
     <div className="FunctionPicker-container">
       <div
-        onClick={handleFunctionChange}
+        onClick={handleEncryptPick}
         className={`FunctionPicker-button ${
           method === "encrypt" ? "FunctionPicker-button-active" : null
         }`}
@@ -16,7 +20,7 @@ export default function FunctionPicker({ method, setmethod }) {
         ENCRYPT
       </div>
       <div
-        onClick={handleFunctionChange}
+        onClick={handleDecryptPick}
         className={`FunctionPicker-button ${
           method === "decrypt" ? "FunctionPicker-button-active" : null
         }`}
