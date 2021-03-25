@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/main.css";
+import "../css/animate.css";
 import EncryptPage from "./EncryptPage.jsx";
 import FunctionPicker from "./FunctionPicker.jsx";
 import DecryptPage from "./DecryptPage.jsx";
@@ -36,13 +37,13 @@ export default function Main() {
         </IconButton>
       </span>
       <div className="containerFunction">
-        <h1>CAESAR CIPHER</h1>
+        <h1 className="jello_title">CAESAR CIPHER</h1>
         <a
           href="https://github.com/Max-Hitchings"
           rel="author noreferrer"
           target="_blank"
         >
-          <h3>BY MAX H</h3>
+          <h3 className="jello_author">BY MAX H</h3>
         </a>
         <FunctionPicker method={method} setmethod={setmethod} />
       </div>
