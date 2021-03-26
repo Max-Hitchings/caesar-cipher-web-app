@@ -6,7 +6,7 @@
   }
 
   22.2% {
-    transform: skewX(-12.5deg) skewY(-12.5deg) scale(1.5);
+    transform: skewX(-12.5deg) skewY(-12.5deg) scale(1.3);
   }
 
   33.3% {
@@ -39,6 +39,5 @@
 }
 
 .jello_author {
-  animation-duration: 3s;
   animation: jello 3s 1;
 }
