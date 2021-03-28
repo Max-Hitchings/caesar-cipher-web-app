@@ -9,6 +9,7 @@
 body {
   margin: 0;
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 h1 {
