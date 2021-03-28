@@ -34,7 +34,7 @@ export default function Main() {
           fontSize="large"
           onClick={() =>
             window.open(
-              "https://github.com/Max-Hitchings/caesar-cipher-school-project/tree/master/caesar-cipher-web-app",
+              "https://github.com/Max-Hitchings/caesar-cipher-school-project/tree/master/caesar-cipher-web-app/src",
               "_blank"
             )
           }
