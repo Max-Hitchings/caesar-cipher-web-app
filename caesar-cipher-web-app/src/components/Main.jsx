@@ -5,6 +5,7 @@ import EncryptPage from "./EncryptPage.jsx";
 import FunctionPicker from "./FunctionPicker.jsx";
 import DecryptPage from "./DecryptPage.jsx";
 import PaletteIcon from "@material-ui/icons/Palette";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import IconButton from "@material-ui/core/IconButton";
 const styles = require("./styles.json");
 
@@ -28,6 +29,18 @@ export default function Main() {
   return (
     <>
       <span className="colourSelect">
+        <IconButton
+          color="secondary"
+          fontSize="large"
+          onClick={() =>
+            window.open(
+              "https://github.com/Max-Hitchings/caesar-cipher-school-project/tree/master/caesar-cipher-web-app",
+              "_blank"
+            )
+          }
+        >
+          <GitHubIcon />
+        </IconButton>
         <IconButton
           color="secondary"
           fontSize="large"
