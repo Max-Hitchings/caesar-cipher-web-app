@@ -27,31 +27,6 @@ const sortResults = async (sorted, setsorted, results, setBestResultValue) => {
     }
     console.log(JSON.stringify(response));
     setsorted(true);
-
-    // detectlanguage.detect(results).then((response) => {
-    //   var topResult = { index: null, score: 0 };
-
-    //   var listIndex;
-    //   for (listIndex in results) {
-    //     response[listIndex].map((item, index) => {
-    //       if (
-    //         item.language === "en" &&
-    //         item.isReliable === true &&
-    //         item.confidence > topResult.score
-    //       ) {
-    //         topResult = { index: listIndex, score: item.confidence };
-    //       }
-    //       return "";
-    //     });
-    //   }
-    //   if (topResult !== null) {
-    //     await setBestResultValue({
-    //       index: topResult.index,
-    //       value: results[topResult.index],
-    //     });
-    //   }
-    //   console.log(JSON.stringify(response));
-    // });
   }
 };
 
