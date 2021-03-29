@@ -3,8 +3,6 @@ import json
 import time
 
 local = 'http://localhost:3000/detect'
-url = 'https://nl-api-maxh.herokuapp.com/detect'
-url2 = 'https://api.max-hitchings.com/detect'
 production = 'https://nl-api.max-hitchings.com/detect'
 data = {"text" : ["max", "no"]}
 
