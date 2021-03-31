@@ -36,10 +36,13 @@ def user_input():
             user_pick = int(input())
             if user_pick <= len(functions):
                 break
-            print("Please a valid number")
+            print(f"Please a number between 0 and {len(functions)-1}")
         except:
             print("Please enter a number")
     print(functions[user_pick][0]())
 
+valid_answers = ["y", "Y", "yes", "YES"]
 while True:
     user_input()
+    if input("Would you like to go again?") not in valid_answers:
+        break
