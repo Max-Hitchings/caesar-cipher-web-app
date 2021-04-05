@@ -56,7 +56,7 @@ export default function Main() {
           rel="author noreferrer"
           target="_blank"
         >
-          <h3 className="jello_author">BY MAX H</h3>
+          <h3 className="jello_author typewriter">BY MAX H</h3>
         </a>
         <FunctionPicker method={method} setmethod={setmethod} />
       </div>
