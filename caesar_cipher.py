@@ -11,7 +11,7 @@ def step(input_text, shift):
         elif char.isupper() and char_ascii >= (90-shift):
             plain_text += chr(((char_ascii-(64-shift))%26)+64)
         else:
-            return f"Sorry i can't handle {char} yet. Should be able to so tho :)"
+            return f"Sorry i can't handle {char} yet. Should be able to soon tho :)"
     return plain_text
 
 def encrypt():
